@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Self Promo App</string>
+
+    <string name="hint_contact_name">Contact Name</string>
+    <string name="hint_contact_number">Contact Number</string>
+    <string name="hint_display_name">Display Name</string>
+    <string name="tool_display_text">Shreyas Bhat</string>
+    <string name="checkbox_text_include_junior">Include Junior</string>
+    <string name="checkbox_text_immediate_start">Immediate Start</string>
+    <string name="hint_available_from_date">Available from date</string>
+    <string name="Button_text_preview_message">Preview Message</string>
+    <string name="send_message">send Message</string>
+
+</resources>
