@@ -86,9 +86,3 @@ You’re free to use, modify, and distribute it.
 * Built with [Android Studio](https://developer.android.com/studio)
 * Uses [Material Design Components](https://m3.material.io/)
 
-```
-
----
-
-👉 I’ve left placeholders for **screenshots** and GitHub repo link — do you want me to also create a **sample MIT LICENSE file** so your repo looks complete?
-```
