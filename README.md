@@ -41,7 +41,7 @@ com.project.selfpromoapp
 
 1. Clone this repository  
    ```bash
-   git clone https://github.com/yourusername/selfpromoapp.git
+   git clone https://github.com/Notshreyasrbhat/SelfPromoApp
 
 2. Open the project in **Android Studio**
 3. Build and run on an emulator or a physical device
@@ -85,4 +85,5 @@ You’re free to use, modify, and distribute it.
 
 * Built with [Android Studio](https://developer.android.com/studio)
 * Uses [Material Design Components](https://m3.material.io/)
+
 
