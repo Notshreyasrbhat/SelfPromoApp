@@ -7,8 +7,6 @@ import android.widget.Button
 import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 import com.google.android.material.textfield.TextInputEditText
 
 class PreviewActivity : AppCompatActivity() {
@@ -21,25 +19,33 @@ class PreviewActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_preview)
+
+        // Display preview message text from passed data
         displayMessage()
+
+        // Setup SMS send button
         setButton()
     }
 
     private fun displayMessage() {
-        @Suppress("DEPRECATION") // Suppress warning for now
+        @Suppress("DEPRECATION") // Using deprecated Serializable intent extra
         message = intent.getSerializableExtra("Message") as Message
+
+        // Build formatted message string using user inputs
         messagePreviewText = """
                 Hi ${message.contactName},
                 
                 My name is ${message.displayName} and I am ${message.getJobDesc()}.
                 
-                I have a portfolio of apps to demonstrate my skills that I  can show on request.
+                I have a portfolio of apps to demonstrate my skills that I can show on request.
                 
                 I am able to start a new position ${message.getAvailability()}.
                 
                 Thanks and best regards.
                 
             """.trimIndent()
+
+        // Show formatted message in TextView
         textmessage = findViewById(R.id.text_view_message)
         textmessage.text = messagePreviewText
     }
@@ -47,12 +53,12 @@ class PreviewActivity : AppCompatActivity() {
     private fun setButton() {
         button = findViewById(R.id.button_send_message)
         button.setOnClickListener {
+            // Open SMS app with recipient and pre-filled message body
             val intent = Intent(Intent.ACTION_SENDTO).apply {
                 data = Uri.parse("smsto: ${message.contactNumber}")
                 putExtra("sms_body", messagePreviewText)
             }
             startActivity(intent)
         }
-
     }
 }
